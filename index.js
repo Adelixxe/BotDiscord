@@ -27,6 +27,7 @@ bot.on('message', message => {
             })
 
             .then((collected) => {
+                message.react(":ok_hand:")
                 maximum = collected.first().content
                 j = Math.floor(Math.random() * 11);
                 if (j % 2 == 0) {
