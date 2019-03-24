@@ -27,15 +27,14 @@ bot.on('message', message => {
             })
 
             .then((collected) => {
-                message.react(":ok_hand:")
+                message.react("👌")
                 maximum = collected.first().content
                 j = Math.floor(Math.random() * 11);
                 if (j % 2 == 0) {
                     i = Math.floor((Math.random() * maximum) + 1);
                     console.log(i);
-                message.reply([i],{
-                    file:"https://media3.giphy.com/media/1O1Xww2UM0VMhROihc/giphy.gif?cid=3640f6095c9812507957636a2e884db8"
-                });
+                message.channel.send("https://media3.giphy.com/media/1O1Xww2UM0VMhROihc/giphy.gif?cid=3640f6095c9812507957636a2e884db8")
+                message.reply([i])
                 maximum = 0
                     }
                 })
