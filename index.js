@@ -35,9 +35,10 @@ bot.on('message', message => {
                         console.log(i);                
                     message.channel.send("https://media3.giphy.com/media/1O1Xww2UM0VMhROihc/giphy.gif?cid=3640f6095c9812507957636a2e884db8")
                     message.reply([i])
-                        }
-                    } else {message.channel.send("Veuillez choisir un dé proposer au-dessus!")}
                     maximum = 0
+                        }
+                    } else {
+                        message.channel.send("Veuillez choisir un dé proposé au-dessus!")}
                     })
                 .catch(() => {
                     message.channel.send("Il y a eu un petit problème :/");
