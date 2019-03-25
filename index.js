@@ -31,8 +31,6 @@ bot.on('message', message => {
                 if (maximum === "3" || maximum === "4" || maximum ==="6" || maximum ==="8" || maximum ==="10" || 
                 maximum ==="12" || maximum ==="16" || maximum ==="2O" || maximum ==="24" || maximum ==="30" ||
                 maximum ==="100") {
-                    j = Math.floor(Math.random() * 11);
-                    if (j % 2 == 0) {
                         i = Math.floor((Math.random() * maximum) + 1);
                         console.log(i);                
                     message.channel.send("https://media3.giphy.com/media/1O1Xww2UM0VMhROihc/giphy.gif?cid=3640f6095c9812507957636a2e884db8")
@@ -43,7 +41,7 @@ bot.on('message', message => {
                         message.channel.send("Veuillez choisir un dé proposé au-dessus!")}
                     })
                 .catch(() => {
-                    message.channel.send("Il y a eu un petit problème :/");
+                    console.log("Il y a eu un petit problème :/");
           });;
             
             })
