@@ -28,16 +28,16 @@ bot.on('message', message => {
 
             .then((collected) => {
                 maximum = collected.first().content
-                if (maximum === "3"|"4"|"6"|"8"|"10"|"12"|"16"|"2O"|"24"|"30"|"100") {
+                if (maximum === "3"||"4"||"6"||"8"||"10"||"12"||"16"||"2O"||"24"||"30"||"100") {
                     j = Math.floor(Math.random() * 11);
                     if (j % 2 == 0) {
                         i = Math.floor((Math.random() * maximum) + 1);
                         console.log(i);                
                     message.channel.send("https://media3.giphy.com/media/1O1Xww2UM0VMhROihc/giphy.gif?cid=3640f6095c9812507957636a2e884db8")
                     message.reply([i])
+                        }
                     } else {message.channel.send("Veuillez choisir un dé proposer au-dessus!")}
                     maximum = 0
-                        }
                     })
                 .catch(() => {
                     message.channel.send("Il y a eu un petit problème :/");
