@@ -28,7 +28,9 @@ bot.on('message', message => {
 
             .then((collected) => {
                 maximum = collected.first().content
-                if (maximum === "3"||"4"||"6"||"8"||"10"||"12"||"16"||"2O"||"24"||"30"||"100") {
+                if (maximum === "3" || maximum === "4" || maximum ==="6" || maximum ==="8" || maximum ==="10" || 
+                maximum ==="12" || maximum ==="16" || maximum ==="2O" || maximum ==="24" || maximum ==="30" ||
+                maximum ==="100") {
                     j = Math.floor(Math.random() * 11);
                     if (j % 2 == 0) {
                         i = Math.floor((Math.random() * maximum) + 1);
