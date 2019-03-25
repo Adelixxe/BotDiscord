@@ -36,7 +36,6 @@ bot.on('message', message => {
                     message.channel.send("https://media3.giphy.com/media/1O1Xww2UM0VMhROihc/giphy.gif?cid=3640f6095c9812507957636a2e884db8")
                     message.reply([i])
                     maximum = 0
-                        }
                     } else {
                         message.channel.send("Veuillez choisir un dé proposé au-dessus!")}
                     })
