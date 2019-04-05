@@ -45,8 +45,8 @@ bot.on('message', message => {
                             .setTimestamp()
                             .addField('**Tu as fait**',`${i}`)
                             message.channel.send({embed});
-                        };
-                    if(message.guild.roles.find(role => role.name === "ROSE")){
+                        }
+                    else if(message.guild.roles.find(role => role.name === "ROSE")){
                         var embed = new Discord.RichEmbed()               
                             .setTitle("Lancé de dés !")
                             .setColor("#ff00ab")
@@ -57,8 +57,8 @@ bot.on('message', message => {
                             .setTimestamp()
                             .addField('**Tu as fait**',`${i}`)
                             message.channel.send({embed});
-                        };
-                    if(message.guild.roles.find(role => role.name === "VERT BLEU")){
+                        }
+                    else if(message.guild.roles.find(role => role.name === "VERT BLEU")){
                         var embed = new Discord.RichEmbed()               
                             .setTitle("Lancé de dés !")
                             .setColor("#235860")
@@ -69,8 +69,8 @@ bot.on('message', message => {
                             .setTimestamp()
                             .addField('**Tu as fait**',`${i}`)
                             message.channel.send({embed});
-                        };
-                    if(message.guild.roles.find(role => role.name === "CYAN")){
+                        }
+                    else if(message.guild.roles.find(role => role.name === "CYAN")){
                         var embed = new Discord.RichEmbed()               
                             .setTitle("Lancé de dés !")
                             .setColor("#0cc4d8")
@@ -98,7 +98,6 @@ bot.on('message', message => {
         
         }
     if (message.content.startsWith(`${prefix}jhelp`)) {   
-        console.log("Aled");
         if(message.guild.roles.find(role => role.name === "ORANGE")){
             var embed = new Discord.RichEmbed()               
                 .setTitle("Liste des commandes :")
@@ -110,8 +109,8 @@ bot.on('message', message => {
                 .addField(". **!jdes**", "pour lancer un dé de 3 à 100 faces")
                 .addField(". **!jhelp**", "pour voir la liste des commandes");
                 message.channel.send({embed});
-            };
-        if(message.guild.roles.find(role => role.name === "ROSE")){
+            }
+        else if(message.guild.roles.find(role => role.name === "ROSE")){
             var embed = new Discord.RichEmbed()               
                 .setTitle("Lancé de dés !")
                 .setColor("#ff00ab")
@@ -122,8 +121,8 @@ bot.on('message', message => {
                 .addField(". **!jdes**", "pour lancer un dé de 3 à 100 faces")
                 .addField(". **!jhelp**", "pour voir la liste des commandes");
                 message.channel.send({embed});
-            };
-        if(message.guild.roles.find(role => role.name === "VERT BLEU")){
+            }
+        else if(message.guild.roles.find(role => role.name === "VERT BLEU")){
             var embed = new Discord.RichEmbed()               
                 .setTitle("Lancé de dés !")
                 .setColor("#235860")
@@ -134,8 +133,8 @@ bot.on('message', message => {
                 .addField(". **!jdes**", "pour lancer un dé de 3 à 100 faces")
                 .addField(". **!jhelp**", "pour voir la liste des commandes");
                 message.channel.send({embed});
-            };
-        if(message.guild.roles.find(role => role.name === "CYAN")){
+            }
+        else if(message.guild.roles.find(role => role.name === "CYAN")){
             var embed = new Discord.RichEmbed()               
                 .setTitle("Lancé de dés !")
                 .setColor("#0cc4d8")
