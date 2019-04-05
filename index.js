@@ -62,14 +62,14 @@ bot.on('message', message => {
     if (message.content.startsWith(`${prefix}jhelp`)) {   
         console.log("Aled");
         var embed = new Discord.RichEmbed()               
-        .setTitle("Liste de commande :")
+        .setTitle("Liste des commandes :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
         .setColor("#00AE86")
         .setDescription("Tu trouveras si dessous la liste complète des commandes du bot 😉")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
-        .addField(". **!jdes**: pour lancer un dé de 3 à 100 faces")
-        .addField(". **!jhelp** ou **!help**: pour voir la liste des commandes");
+        .addField(". **!jdes**", "pour lancer un dé de 3 à 100 faces")
+        .addField(". **!jhelp**", "pour voir la liste des commandes");
 
     message.channel.send({embed});
 
