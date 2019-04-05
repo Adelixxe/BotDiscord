@@ -44,6 +44,7 @@ bot.on('message', message => {
                             .setFooter("Bot by @Adelixxe")
                             .setTimestamp()
                             .addField('**Tu as fait**',`${i}`)
+                            message.channel.send({embed});
                         };
                     if(message.guild.roles.find(role => role.name === "ROSE")){
                         var embed = new Discord.RichEmbed()               
@@ -55,6 +56,7 @@ bot.on('message', message => {
                             .setFooter("Bot by @Adelixxe")
                             .setTimestamp()
                             .addField('**Tu as fait**',`${i}`)
+                            message.channel.send({embed});
                         };
                     if(message.guild.roles.find(role => role.name === "VERT BLEU")){
                         var embed = new Discord.RichEmbed()               
@@ -66,6 +68,7 @@ bot.on('message', message => {
                             .setFooter("Bot by @Adelixxe")
                             .setTimestamp()
                             .addField('**Tu as fait**',`${i}`)
+                            message.channel.send({embed});
                         };
                     if(message.guild.roles.find(role => role.name === "CYAN")){
                         var embed = new Discord.RichEmbed()               
@@ -77,8 +80,9 @@ bot.on('message', message => {
                             .setFooter("Bot by @Adelixxe")
                             .setTimestamp()
                             .addField('**Tu as fait**',`${i}`)
+                            message.channel.send({embed});
                         };                        
-                    message.channel.send({embed});
+
                         
                     } else {
                         message.channel.send("Veuillez choisir un dé proposé au-dessus!")}
@@ -105,6 +109,7 @@ bot.on('message', message => {
                 .setTimestamp()
                 .addField(". **!jdes**", "pour lancer un dé de 3 à 100 faces")
                 .addField(". **!jhelp**", "pour voir la liste des commandes");
+                message.channel.send({embed});
             };
         if(message.guild.roles.find(role => role.name === "ROSE")){
             var embed = new Discord.RichEmbed()               
@@ -116,6 +121,7 @@ bot.on('message', message => {
                 .setTimestamp()
                 .addField(". **!jdes**", "pour lancer un dé de 3 à 100 faces")
                 .addField(". **!jhelp**", "pour voir la liste des commandes");
+                message.channel.send({embed});
             };
         if(message.guild.roles.find(role => role.name === "VERT BLEU")){
             var embed = new Discord.RichEmbed()               
@@ -127,6 +133,7 @@ bot.on('message', message => {
                 .setTimestamp()
                 .addField(". **!jdes**", "pour lancer un dé de 3 à 100 faces")
                 .addField(". **!jhelp**", "pour voir la liste des commandes");
+                message.channel.send({embed});
             };
         if(message.guild.roles.find(role => role.name === "CYAN")){
             var embed = new Discord.RichEmbed()               
@@ -138,6 +145,7 @@ bot.on('message', message => {
                 .setTimestamp()
                 .addField(". **!jdes**", "pour lancer un dé de 3 à 100 faces")
                 .addField(". **!jhelp**", "pour voir la liste des commandes");
+                message.channel.send({embed});
             };
 
     message.channel.send({embed});
