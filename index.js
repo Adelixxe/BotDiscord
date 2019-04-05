@@ -18,8 +18,8 @@ bot.on('ready', () => {
 
 
 bot.on('message', message => {
-
-    if (message.content === "!jdes") {
+    var prefix = '!'
+    if (message.content.startsWith(`${prefix}jdes`)) {
         message.channel.send("Quel type de dès veux tu jeter ? (3,4,6,8,10,12,16,20,24,30,100)")
         .then(() => {
             message.channel.awaitMessages(() => true, {
@@ -59,7 +59,7 @@ bot.on('message', message => {
       });
         
         }
-    if (message.content.startsWith === "!jhelp" || "!jdr") {   
+    if (message.content.startsWith(`${prefix}jhelp`)) {   
         const embedhelp = new Discord.RichEmbed()               
         .setTitle("Liste de commande :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
@@ -68,7 +68,7 @@ bot.on('message', message => {
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
         .addField(". **!jdes**", "Il lancera un dé de 3 à 100 faces")
-        .addField(". **!jhelp** ou **!jdr**", "pour voir la liste des commandes");
+        .addField(". **!jhelp**", "pour voir la liste des commandes");
 
         message.channel.send({embedhelp})
 
