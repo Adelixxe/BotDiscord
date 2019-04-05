@@ -35,9 +35,9 @@ bot.on('message', message => {
                     if (j % 2 == 0) {
                         i = Math.floor((Math.random() * maximum) + 1);
                         console.log(i); 
-                        const embed = new Discord.RichEmbed()               
+                        var embed = new Discord.RichEmbed()               
                             .setTitle("Lancé de dés !")
-                            .setAuthor("McJDR")
+                            .setAuthor("McJDR", message.author.avatarURL)
 
                             .setColor("#00AE86")
                             .setDescription("Le stress est présent, vas tu y arriver ou échouer ?")
