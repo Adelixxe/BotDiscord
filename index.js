@@ -37,7 +37,7 @@ bot.on('message', message => {
                         console.log(i); 
                         var embed = new Discord.RichEmbed()               
                             .setTitle("Lancé de dés !")
-                            .setAuthor("McJDR", message.author.avatarURL)
+                            .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
 
                             .setColor("#00AE86")
                             .setDescription("Le stress est présent, vas tu y arriver ou échouer ?")
