@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const embed = new Discord.RichEmbed();
 
 var cli = new Discord.Client({autoReconnect:true});
 var maximum = 0;
@@ -35,14 +34,19 @@ bot.on('message', message => {
                     j = Math.floor(Math.random() * 11);
                     if (j % 2 == 0) {
                         i = Math.floor((Math.random() * maximum) + 1);
-                        console.log(i);                
-                        embed.setTitle("Lancé de dés !")
-                        .setColor("#00AE86")
-                        .setDescription("Le stress est présent, vas tu y arriver ou échouer ?")
-                        .addField("Tu as fait ",[i],"!")
-                        .setImage("https://media3.giphy.com/media/1O1Xww2UM0VMhROihc/giphy.gif?cid=3640f6095c9812507957636a2e884db8")
-                        .addBlankField(true)
-                        .setFooter("Bot by @Adelixxe")
+                        console.log(i); 
+                        const embed = new Discord.RichEmbed()               
+                            .setTitle("Lancé de dés !")
+                            .setAuthor("McJDR")
+
+                            .setColor("#00AE86")
+                            .setDescription("Le stress est présent, vas tu y arriver ou échouer ?")
+                            .setImage("https://s2.gifyu.com/images/giphyef772b3a51d10df7.gif")
+                            .setFooter("Bot by @Adelixxe")
+                            .setTimestamp()
+
+                            .addField("Tu as fait ",[i],"!",true)
+                            .addBlankField(true);
                         message.channel.send({embed});
                         }
                     } else {
