@@ -3,7 +3,6 @@ const bot = new Discord.Client();
 
 var cli = new Discord.Client({autoReconnect:true});
 var maximum = 0;
-
 bot.commands = new Discord.Collection();
 bot.on("error", (e) => console.error(e));
 bot.on("warn", (e) => console.warn(e));
@@ -70,9 +69,9 @@ bot.on('message', message => {
         .setDescription("Tu trouveras si dessous la liste complète des commandes du bot 😉")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
-        .addField(". **Le préfix du bot est !**")
-        .addField(". **jdes**: pour lancer un dé de 3 à 100 faces")
-        .addField(". **jhelp** ou **!help**: pour voir la liste des commandes");
+        .addField(". **préfix**", "Le préfix du bot est **!**")
+        .addField(". **jdes**", "Il lancera un dé de 3 à 100 faces")
+        .addField(". **jhelp** ou **help**", "Permet de voir la liste des commandes");
 
     message.channel.send({embed});
 
