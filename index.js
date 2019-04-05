@@ -18,7 +18,8 @@ bot.on('ready', () => {
 
 
 bot.on('message', message => {
-    if (message.content.startsWith === "!jdes") {
+
+    if (message.content === "!jdes") {
         message.channel.send("Quel type de dès veux tu jeter ? (3,4,6,8,10,12,16,20,24,30,100)")
         .then(() => {
             message.channel.awaitMessages(() => true, {
@@ -26,7 +27,6 @@ bot.on('message', message => {
                 time: 30000,
                 errors: ['time'],
             })
-
             .then((collected) => {
                 maximum = collected.first().content
                 if (maximum === "3" || maximum === "4" || maximum ==="6" || maximum ==="8" || maximum ==="10" || 
