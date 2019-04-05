@@ -146,10 +146,6 @@ bot.on('message', message => {
                 .addField(". **!jhelp**", "pour voir la liste des commandes");
                 message.channel.send({embed});
             };
-
-    message.channel.send({embed});
-
-
     };            
 })
 
