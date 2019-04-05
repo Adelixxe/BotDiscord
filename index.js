@@ -17,8 +17,12 @@ bot.on('ready', () => {
 });
 
 
+//Blacklist du bot pour éviter boucle.
+const arrayOfUsersNames = ['McJDR'];
 
-
+for (let i = 0; i < arrayOfUsersNames.length; i++) {
+    if (message.author.username.toLowerCase() === arrayOfUsersNames[i].toLowerCase()) return message.reply('You are on the blacklist!');
+};
 
 
 
@@ -40,20 +44,19 @@ bot.on('message', message => {
                 if (maximum === "3" || maximum === "4" || maximum ==="6" || maximum ==="8" || maximum ==="10" || 
                 maximum ==="12" || maximum ==="16" || maximum ==="2O" || maximum ==="24" || maximum ==="30" ||
                 maximum ==="100") {
-                        i = Math.floor((Math.random() * maximum) + 1);
-                        console.log(i); 
-                        var embed = new Discord.RichEmbed()               
-                            .setTitle("Lancé de dés !")
-                            .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
+                    i = Math.floor((Math.random() * maximum) + 1);
+                    console.log(i); 
+                    var embed = new Discord.RichEmbed()               
+                        .setTitle("Lancé de dés !")
+                        .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")                            
+                        .setColor("#00AE86")
+                        .setDescription("Le stress est présent, vas tu y arriver ou échouer ?")
+                        .setImage("https://s2.gifyu.com/images/giphyef772b3a51d10df7.gif")
+                        .setFooter("Bot by @Adelixxe")
+                        .setTimestamp()
+                        .addField('**Tu as fait**',`${i}`);
 
-                            .setColor("#00AE86")
-                            .setDescription("Le stress est présent, vas tu y arriver ou échouer ?")
-                            .setImage("https://s2.gifyu.com/images/giphyef772b3a51d10df7.gif")
-                            .setFooter("Bot by @Adelixxe")
-                            .setTimestamp()
-                            .addField('**Tu as fait**',`${i}`);
-
-                        message.channel.send({embed});
+                    message.channel.send({embed});
                         
                     } else {
                         message.channel.send("Veuillez choisir un dé proposé au-dessus!")}
@@ -68,21 +71,23 @@ bot.on('message', message => {
       });
         
         }
-    if (message.content === "!jhelp" || "!jdr") {               
-    message.channel.send({embedhelp: {
-        Title: "Liste de commande :",
-        Author: ("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png"),
-        Color: "#00AE86",
-        Description: "Tu trouveras si dessous la liste complète des commandes du bot 😉",
-        Footer: "Bot by @Adelixxe",
-        Timestamp: true,
-        Field: (". **préfix**", "Le préfix du bot est **!**"),
-        Field: (". **jdes**", "Il lancera un dé de 3 à 100 faces"),
-        Field: (". **jhelp** ou **help**", "Permet de voir la liste des commandes")
-    }});
+    if (message.content === "!jhelp" || "!jdr") {   
 
-    }            
-    })
+        var embed = new Discord.RichEmbed()               
+        .setTitle("Liste de commande :")
+        .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
+
+        .setColor("#00AE86")
+        .setDescription("Tu trouveras si dessous la liste complète des commandes du bot 😉")
+        .setFooter("Bot by @Adelixxe")
+        .setTimestamp()
+        .addField(". **préfix**", "Le préfix du bot est **!**")
+        .addField(". **jdes**", "Il lancera un dé de 3 à 100 faces")
+        .addField(". **jhelp** ou **help**", "pour voir la liste des commandes");
+        message.author.send({embedhelp})
+
+    };            
+})
 
 
 
