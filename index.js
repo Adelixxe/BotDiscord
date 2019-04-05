@@ -17,16 +17,21 @@ bot.on('ready', () => {
 });
 
 
-var embedhelp = new Discord.RichEmbed()
+const embedhelp = new Discord.RichEmbed()
 .setTitle("Liste de commande :")
 .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
+
 .setColor("#00AE86")
-.setDescription("Tu trouveras ci dessous la liste complète des commandes du bot 😉")
+.setDescription("Tu trouveras si dessous la liste complète des commandes du bot 😉")
 .setFooter("Bot by @Adelixxe")
 .setTimestamp()
 .addField(". **préfix**", "Le préfix du bot est **!**")
 .addField(". **jdes**", "Il lancera un dé de 3 à 100 faces")
 .addField(". **jhelp** ou **help**", "Permet de voir la liste des commandes");
+
+
+
+
 
 
 bot.on('message', message => {
@@ -47,16 +52,18 @@ bot.on('message', message => {
                     j = Math.floor(Math.random() * 11);
                     if (j % 2 == 0) {
                         i = Math.floor((Math.random() * maximum) + 1);
-                        console.log(i);
+                        console.log(i); 
                         var embed = new Discord.RichEmbed()               
-                        .setTitle("Lancé de dés !")
-                        .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
-                        .setColor("#00AE86")
-                        .setDescription("Le stress est présent, vas tu y arriver ou échouer ?")
-                        .setImage("https://s2.gifyu.com/images/giphyef772b3a51d10df7.gif")
-                        .setFooter("Bot by @Adelixxe")
-                        .setTimestamp()
-                        .addField('**Tu as fait**',`${i}`); 
+                            .setTitle("Lancé de dés !")
+                            .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
+
+                            .setColor("#00AE86")
+                            .setDescription("Le stress est présent, vas tu y arriver ou échouer ?")
+                            .setImage("https://s2.gifyu.com/images/giphyef772b3a51d10df7.gif")
+                            .setFooter("Bot by @Adelixxe")
+                            .setTimestamp()
+                            .addField('**Tu as fait**',`${i}`);
+
                         message.channel.send({embed});
                         }
                     } else {
@@ -72,8 +79,10 @@ bot.on('message', message => {
       });
         
         }
+    if (message.content === "!jhelp" || "!jdr") {               
+    message.channel.send({embedhelp});
 
-    if (message.content === "!jhelp" || "!jdr") message.channel.send({embedhelp});            
+    }            
     })
 
 
