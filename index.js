@@ -44,9 +44,8 @@ bot.on('message', message => {
                             .setImage("https://s2.gifyu.com/images/giphyef772b3a51d10df7.gif")
                             .setFooter("Bot by @Adelixxe")
                             .setTimestamp()
+                            .addField('**Tu as fait**',`${i}`);
 
-                            .addField("Tu as fait ",[i],"!",true)
-                            .addBlankField(true);
                         message.channel.send({embed});
                         }
                     } else {
