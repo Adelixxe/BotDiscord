@@ -17,17 +17,6 @@ bot.on('ready', () => {
 });
 
 
-//Blacklist du bot pour éviter boucle.
-const arrayOfUsersNames = ['McJDR'];
-
-for (let i = 0; i < arrayOfUsersNames.length; i++) {
-    if (message.author.username.toLowerCase() === arrayOfUsersNames[i].toLowerCase()) return message.reply('You are on the blacklist!');
-};
-
-
-
-
-
 bot.on('message', message => {
 
     if (message.content === "!jdes") {
