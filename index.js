@@ -25,7 +25,8 @@ bot.on('ready', () => {
 
 
 bot.on('message', message => {
-    const embedhelp = new Discord.RichEmbed()
+    const embedhelp = {
+        new Discord.RichEmbed() :
         .setTitle("Liste de commande :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
 
@@ -36,7 +37,7 @@ bot.on('message', message => {
         .addField(". **préfix**", "Le préfix du bot est **!**")
         .addField(". **jdes**", "Il lancera un dé de 3 à 100 faces")
         .addField(". **jhelp** ou **help**", "Permet de voir la liste des commandes");
-        
+    }
     if (message.content === "!jdes") {
         message.channel.send("Quel type de dès veux tu jeter ? (3,4,6,8,10,12,16,20,24,30,100)")
         .then(() => {
@@ -82,7 +83,17 @@ bot.on('message', message => {
         
         }
     if (message.content === "!jhelp" || "!jdr") {               
-    message.channel.send({embedhelp});
+    message.channel.send({embedhelp: {
+        Title: "Liste de commande :",
+        Author: ("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png"),
+        Color: "#00AE86",
+        Description: "Tu trouveras si dessous la liste complète des commandes du bot 😉",
+        Footer: "Bot by @Adelixxe",
+        Timestamp: true,
+        Field: (". **préfix**", "Le préfix du bot est **!**"),
+        Field: (". **jdes**", "Il lancera un dé de 3 à 100 faces"),
+        Field: (". **jhelp** ou **help**", "Permet de voir la liste des commandes")
+    }});
 
     }            
     })
