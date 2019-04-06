@@ -93,6 +93,25 @@ bot.on('message', message => {
         .addField("Inventaire:", "Mandoline magique(héritage familial), vêtement de spectacle(avec un chapeau à plume), dague, besace, moyenne somme d'argent");
         message.channel.send({embed});
     }
+
+    if (message.content.startsWith(`${prefix}info`) && message.author.id === '209656163736879105') {
+        console.log("ID Reconnu SILVERALEXTV");
+        var embed = new Discord.RichEmbed()        
+        .setTitle("Informations sur le personnage :")
+        .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
+        .setColor("#00AE86")
+        .setDescription("Apprenez en plus sur l'enfant (   ) ♂")
+        .setFooter("Bot by @Adelixxe")
+        .setTimestamp()
+        .addField("Nom:", "(Envoie ton pseudo stp)")  
+        .addField("Race:", "Humain") 
+        .addField("Classe:", "Voleur")
+        .addField("Spécificité:", "Enfant")
+        .addField("Capacité:","Sens du danger")
+        .addField("Lancé de dés:","4/2")
+        .addField("Inventaire:","Dague, vêtements de tissu, outil de crochetage fait main, besace, très peu d'argent")
+        message.channel.send({embed});   
+    }
 })
 
 bot.login(process.env.BOT_TOKEN);
