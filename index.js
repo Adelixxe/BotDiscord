@@ -87,7 +87,7 @@ bot.on('message', message => {
         .addField("Nom:", "Kah'nibal H'korpth")
         .addField("Race:", "Nain")
         .addField("Classe:", "Barde")
-        .addField("Spécificité:", "Nyctalopie, aime boire, fais parti de la basse classe nain")
+        .addField("Spécificité:", "Nyctalopie, aime boire, fait parti de la basse classe nain")
         .addField("Capacité:", "Musique de sommeil")
         .addField("Lancé de dés:", "3/3")
         .addField("Inventaire:", "Mandoline magique(héritage familial), vêtement de spectacle(avec un chapeau à plume), dague, besace, moyenne somme d'argent");
