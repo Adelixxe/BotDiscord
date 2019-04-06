@@ -85,7 +85,7 @@ bot.on('message', message => {
         .setDescription("Apprenez en plus sur le nain Kan'hibal H'korpth ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
-        .addField("Nom:", "Kah'nibal H'korpth")
+        .addField("Nom:", "Kan'hibal H'korpth")
         .addField("Race:", "Nain")
         .addField("Classe:", "Barde")
         .addField("Spécificité:", "Nyctalopie, aime boire, fait parti de la basse classe nain")
