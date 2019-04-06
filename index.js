@@ -67,9 +67,9 @@ bot.on('message', message => {
         .setDescription("Tu trouveras si dessous la liste complète des commandes du bot 😉")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
-        .addField(". **!jdes**", "Permet d'effectuer un lancé un dé de 3 à 100 faces")
-        .addField(". **!jhelp**", "Permet de voir la liste des commandes")
-        .addField(". **!info**", "Permet de voir les informations sur ton personnage");
+        .addField("**!jdes**", "Permet d'effectuer un lancé un dé de 3 à 100 faces")
+        .addField("**!jhelp**", "Permet de voir la liste des commandes")
+        .addField("**!info**", "Permet de voir les informations sur ton personnage");
 
     message.channel.send({embed});
 
@@ -81,7 +81,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setTitle("Informations sur le personnage :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
-        .setColor("#00AE86")
+        .setColor("#f58e00")
         .setDescription("Apprenez en plus sur le nain Kan'hibal H'korpth ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
@@ -100,7 +100,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()        
         .setTitle("Informations sur le personnage :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
-        .setColor("#00AE86")
+        .setColor("#ff00ab")
         .setDescription("Apprenez en plus sur l'enfant Ulrick LeSournois ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
@@ -119,7 +119,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()        
         .setTitle("Informations sur le personnage :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
-        .setColor("#00AE86")
+        .setColor("#8b00d3")
         .setDescription("Apprenez en plus sur le guerrier Ned Ricwulf ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
@@ -138,7 +138,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()        
         .setTitle("Informations sur le personnage :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
-        .setColor("#00AE86")
+        .setColor("#235860")
         .setDescription("Apprenez en plus sur le nécromancien        ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
@@ -157,7 +157,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()        
         .setTitle("Informations sur le personnage :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
-        .setColor("#00AE86")
+        .setColor("#0cc4d8")
         .setDescription("Apprenez en plus sur l'orc Nahrgal Shazug ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
