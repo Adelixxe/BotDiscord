@@ -75,7 +75,7 @@ bot.on('message', message => {
 
     };         
     
-    if ((message.content.startsWith(`${prefix}info`))&&(message.author.id === 294148055228350464 )){
+    if ((message.content.startsWith(`${prefix}info`))&&(message.author.id === '294148055228350464' )){
         var embed = new Discord.RichEmbed()
         .setTitle("Informations sur le personnage :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
