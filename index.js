@@ -92,7 +92,7 @@ bot.on('message', message => {
         .addField("Lancé de dés:", "3/3")
         .addField("Inventaire:", "Mandoline magique(héritage familial), vêtement de spectacle(avec un chapeau à plume), dague, besace, moyenne somme d'argent");
         message.channel.send({embed});
-    }
+    };
 
     if (message.content.startsWith(`${prefix}info`) && message.author.id === '209656163736879105') {
         console.log("ID Reconnu ALEXANDRE");
@@ -111,7 +111,7 @@ bot.on('message', message => {
         .addField("Lancé de dés:","4/2")
         .addField("Inventaire:","Dague, vêtements de tissu, outil de crochetage fait main, besace, très peu d'argent")
         message.channel.send({embed});   
-    }
+    };
 
     if (message.content.startsWith(`${prefix}info`) && message.author.id === '264005489413718027') {
         console.log("ID Reconnu PAUL");
@@ -122,7 +122,7 @@ bot.on('message', message => {
         .setDescription("Apprenez en plus sur le guerrier         ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
-        .addField("Nom:", "    ")  
+        .addField("Nom:", "(en attente)")  
         .addField("Race:", "Humain") 
         .addField("Classe:", "Guerrier")
         .addField("Spécificité:", "Impulsif, air menaçant")
@@ -130,7 +130,7 @@ bot.on('message', message => {
         .addField("Lancé de dés:", "3/3")
         .addField("Inventaire:", "Armure lourde, espadon, besace, peu d'argent")
         message.channel.send({embed});   
-    }    
+    };   
 
     if (message.content.startsWith(`${prefix}info`) && message.author.id === '149503854126432256') {
         console.log("ID Reconnu ROMAIN");
@@ -141,7 +141,7 @@ bot.on('message', message => {
         .setDescription("Apprenez en plus sur le nécromancien        ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
-        .addField("Nom:", "                ")  
+        .addField("Nom:", "(en attente)")  
         .addField("Race:", "Humain") 
         .addField("Classe:", "Nécromancien")
         .addField("Spécificité:", "Scientifique borner, antireligieux")
@@ -149,7 +149,7 @@ bot.on('message', message => {
         .addField("Lancé de dés:","3/3")
         .addField("Inventaire:","Sceptre magique, robe noir, materiel d'alchimie, besace, beaucoup d'argent")
         message.channel.send({embed});   
-    }    
+    };    
 
     if (message.content.startsWith(`${prefix}info`) && message.author.id === '283578951874510849') {
         console.log("ID Reconnu NOA");
@@ -160,7 +160,7 @@ bot.on('message', message => {
         .setDescription("Apprenez en plus sur l'orc          ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
-        .addField("Nom:", "         ")  
+        .addField("Nom:", "(en attente)")  
         .addField("Race:", "Orc") 
         .addField("Classe:", "Chaman")
         .addField("Spécificité:", "Bonté naturel, plutôt costaud, est sensible à propos de son chien mort")
@@ -168,7 +168,7 @@ bot.on('message', message => {
         .addField("Lancé de dés:","3/3")
         .addField("Inventaire:","Bourse à graine(10, capacité max:20), faucille, tenue sans manche et sarouel, une potion de soin, sac à dos de bonne taille, peu d'argent")
         message.channel.send({embed});   
-    }       
+    };       
 })
 
 bot.login(process.env.BOT_TOKEN);
