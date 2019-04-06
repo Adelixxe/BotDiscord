@@ -145,7 +145,7 @@ bot.on('message', message => {
         .addField("Race:", "Humain") 
         .addField("Classe:", "Nécromancien")
         .addField("Spécificité:", "Scientifique borner, antireligieux")
-        .addField("Capacité:","résurrection ")
+        .addField("Capacité:","Résurrection ")
         .addField("Lancé de dés:","3/3")
         .addField("Inventaire:","Sceptre magique, robe noir, materiel d'alchimie, besace, beaucoup d'argent")
         message.channel.send({embed});   
