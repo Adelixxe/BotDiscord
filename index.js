@@ -67,8 +67,9 @@ bot.on('message', message => {
         .setDescription("Tu trouveras si dessous la liste complète des commandes du bot 😉")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
-        .addField(". **!jdes**", "pour lancer un dé de 3 à 100 faces")
-        .addField(". **!jhelp**", "pour voir la liste des commandes");
+        .addField(". **!jdes**", "Permet d'effectuer un lancé un dé de 3 à 100 faces")
+        .addField(". **!jhelp**", "Permet de voir la liste des commandes")
+        .addField(". **!info**", "Permet de voir les informations sur ton personnage");
 
     message.channel.send({embed});
 
