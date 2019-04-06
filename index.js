@@ -75,7 +75,8 @@ bot.on('message', message => {
 
     };         
     
-    if ((message.content.startsWith(`${prefix}info`))&&(message.author.id === '294148055228350464' )){
+    if (message.content.startsWith(`${prefix}info`) && message.author.id === '294148055228350464' ){
+        console.log("ID Reconnu ADELIXXE");
         var embed = new Discord.RichEmbed()
         .setTitle("Informations sur le personnage :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
@@ -90,7 +91,7 @@ bot.on('message', message => {
         .addField("Capacité:", "Musique de sommeil")
         .addField("Lancé de dés:", "3/3")
         .addField("Inventaire:","- Mandoline magique(héritage familial)", "- Vêtement de spectacle(avec un chapeau à plume)","- Dague", "- Besace", "- Moyenne somme d'argent")
-    }else{console.log("Mauvais ID")};
+    }
 })
 
 bot.login(process.env.BOT_TOKEN);
