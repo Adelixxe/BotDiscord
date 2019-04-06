@@ -76,7 +76,7 @@ bot.on('message', message => {
     };         
     
     if (message.content.startsWith(`${prefix}info`) && message.author.id === '294148055228350464' ){
-        console.log("ID Reconnu ADELIXXE");
+        console.log("ID Reconnu THOMAS");
         var embed = new Discord.RichEmbed()
         .setTitle("Informations sur le personnage :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
@@ -95,15 +95,15 @@ bot.on('message', message => {
     }
 
     if (message.content.startsWith(`${prefix}info`) && message.author.id === '209656163736879105') {
-        console.log("ID Reconnu SILVERALEXTV");
+        console.log("ID Reconnu ALEXANDRE");
         var embed = new Discord.RichEmbed()        
         .setTitle("Informations sur le personnage :")
         .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
         .setColor("#00AE86")
-        .setDescription("Apprenez en plus sur l'enfant (   ) ♂")
+        .setDescription("Apprenez en plus sur l'enfant Ulrick LeSournois ♂")
         .setFooter("Bot by @Adelixxe")
         .setTimestamp()
-        .addField("Nom:", "(Envoie ton pseudo stp)")  
+        .addField("Nom:", "Ulrick LeSournois")  
         .addField("Race:", "Humain") 
         .addField("Classe:", "Voleur")
         .addField("Spécificité:", "Enfant")
@@ -112,6 +112,63 @@ bot.on('message', message => {
         .addField("Inventaire:","Dague, vêtements de tissu, outil de crochetage fait main, besace, très peu d'argent")
         message.channel.send({embed});   
     }
+
+    if (message.content.startsWith(`${prefix}info`) && message.author.id === '264005489413718027') {
+        console.log("ID Reconnu PAUL");
+        var embed = new Discord.RichEmbed()        
+        .setTitle("Informations sur le personnage :")
+        .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
+        .setColor("#00AE86")
+        .setDescription("Apprenez en plus sur le guerrier         ♂")
+        .setFooter("Bot by @Adelixxe")
+        .setTimestamp()
+        .addField("Nom:", "    ")  
+        .addField("Race:", "Humain") 
+        .addField("Classe:", "Guerrier")
+        .addField("Spécificité:", "Impulsif, air menaçant")
+        .addField("Capacité:", "Soif de sang")
+        .addField("Lancé de dés:", "3/3")
+        .addField("Inventaire:", "Armure lourde, espadon, besace, peu d'argent")
+        message.channel.send({embed});   
+    }    
+
+    if (message.content.startsWith(`${prefix}info`) && message.author.id === '149503854126432256') {
+        console.log("ID Reconnu ROMAIN");
+        var embed = new Discord.RichEmbed()        
+        .setTitle("Informations sur le personnage :")
+        .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
+        .setColor("#00AE86")
+        .setDescription("Apprenez en plus sur le nécromancien        ♂")
+        .setFooter("Bot by @Adelixxe")
+        .setTimestamp()
+        .addField("Nom:", "                ")  
+        .addField("Race:", "Humain") 
+        .addField("Classe:", "Nécromancien")
+        .addField("Spécificité:", "Scientifique borner, antireligieux")
+        .addField("Capacité:","résurrection ")
+        .addField("Lancé de dés:","3/3")
+        .addField("Inventaire:","Sceptre magique, robe noir, materiel d'alchimie, besace, beaucoup d'argent")
+        message.channel.send({embed});   
+    }    
+
+    if (message.content.startsWith(`${prefix}info`) && message.author.id === '283578951874510849') {
+        console.log("ID Reconnu NOA");
+        var embed = new Discord.RichEmbed()        
+        .setTitle("Informations sur le personnage :")
+        .setAuthor("McJDR", "https://cdn.discordapp.com/avatars/559511560884584458/8ee41f0e4fd29901b9f6da57f14af9af.png")
+        .setColor("#00AE86")
+        .setDescription("Apprenez en plus sur l'orc          ♂")
+        .setFooter("Bot by @Adelixxe")
+        .setTimestamp()
+        .addField("Nom:", "         ")  
+        .addField("Race:", "Orc") 
+        .addField("Classe:", "Chaman")
+        .addField("Spécificité:", "Bonté naturel, plutôt costaud, est sensible à propos de son chien mort")
+        .addField("Capacité:","Graine principale: arc électrique, alchimie de base")
+        .addField("Lancé de dés:","3/3")
+        .addField("Inventaire:","Bourse à graine(10, capacité max:20), faucille, tenue sans manche et sarouel, une potion de soin, sac à dos de bonne taille, peu d'argent")
+        message.channel.send({embed});   
+    }       
 })
 
 bot.login(process.env.BOT_TOKEN);
