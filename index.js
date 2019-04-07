@@ -167,7 +167,7 @@ bot.on('message', message => {
         .addField("Spécificité:", "Bonté naturel, plutôt costaud, est sensible à propos de son chien mort")
         .addField("Capacité:","Graine principale: arc électrique, alchimie de base")
         .addField("Lancé de dés:","3/3")
-        .addField("Inventaire:","Bourse à graine(10, capacité max:20), faucille, tenue sans manche et sarouel, une potion de soin, sac à dos de bonne taille, peu d'argent")
+        .addField("Inventaire:","Bourse à graine(10, capacité max:20), faucille, tenue sans manche et sarouel, une potion de soin, sac à dos de bonne taille, très peu d'argent")
         message.channel.send({embed});   
     };       
 })
