@@ -91,7 +91,8 @@ bot.on('message', message => {
         .addField("Spécificité:", "Nyctalopie, aime boire, fait parti de la basse classe nain")
         .addField("Capacité:", "Berceuse naine")
         .addField("Lancé de dés:", "3/3")
-        .addField("Inventaire:", "Mandoline magique (héritage familial), vêtement de spectacle(avec un chapeau à plume), dague, besace, moyenne somme d'argent");
+        .addField("Inventaire:", "Mandoline magique (héritage familial), vêtement de spectacle(avec un chapeau à plume), dague, besace, moyenne somme d'argent")
+        .addField("Santé:", "Blessé");
         message.channel.send({embed});
     };
 
@@ -111,6 +112,7 @@ bot.on('message', message => {
         .addField("Capacité:","Sens du danger")
         .addField("Lancé de dés:","4/2")
         .addField("Inventaire:","Dague, vêtements de tissu, outil de crochetage fait main, besace, très peu d'argent")
+        .addField("Santé:", "Bonne santé");
         message.channel.send({embed});   
     };
 
@@ -130,6 +132,7 @@ bot.on('message', message => {
         .addField("Capacité:", "Soif de sang")
         .addField("Lancé de dés:", "3/3")
         .addField("Inventaire:", "Armure lourde, espadon, besace, peu d'argent")
+        .addField("Santé:", "Bonne santé");
         message.channel.send({embed});   
     };   
 
@@ -149,6 +152,7 @@ bot.on('message', message => {
         .addField("Capacité:","Résurrection ")
         .addField("Lancé de dés:","3/3")
         .addField("Inventaire:","Sceptre magique, robe noir, materiel d'alchimie, besace, beaucoup d'argent")
+        .addField("Santé:", "Bonne santé");
         message.channel.send({embed});   
     };    
 
@@ -168,6 +172,7 @@ bot.on('message', message => {
         .addField("Capacité:","Graine principale: arc électrique, alchimie de base")
         .addField("Lancé de dés:","3/3")
         .addField("Inventaire:","Bourse à graine(10, capacité max:20), faucille, tenue sans manche et sarouel, une potion de soin, sac à dos de bonne taille, très peu d'argent, boussole")
+        .addField("Santé:", "Bonne santé");
         message.channel.send({embed});   
     };       
 })
