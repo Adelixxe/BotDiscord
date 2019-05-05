@@ -131,7 +131,7 @@ bot.on('message', message => {
         .addField("Spécificité:", "Impulsif, air menaçant")
         .addField("Capacité:", "Soif de sang")
         .addField("Lancé de dés:", "3/3")
-        .addField("Inventaire:", "Armure lourde, espadon, besace, peu d'argent")
+        .addField("Inventaire:", "Armure lourde, besace, peu d'argent, épée longue de glace")
         .addField("Santé:", "Bonne santé");
         message.channel.send({embed});   
     };   
@@ -171,7 +171,7 @@ bot.on('message', message => {
         .addField("Spécificité:", "Bonté naturel, plutôt costaud, est sensible à propos de son chien mort")
         .addField("Capacité:","Graine principale: arc électrique, alchimie de base")
         .addField("Lancé de dés:","3/3")
-        .addField("Inventaire:","Bourse à graine(10, capacité max:20), faucille, tenue sans manche et sarouel, une potion de soin, sac à dos de bonne taille, très peu d'argent, boussole")
+        .addField("Inventaire:","Bourse à graine(10, capacité max:20), faucille, tenue sans manche et sarouel, une potion de soin, sac à dos de bonne taille, très peu d'argent, boussole, espadon")
         .addField("Santé:", "Bonne santé");
         message.channel.send({embed});   
     };       
