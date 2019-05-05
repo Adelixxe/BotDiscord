@@ -112,7 +112,7 @@ bot.on('message', message => {
         .addField("Capacité:","Sens du danger")
         .addField("Lancé de dés:","4/2")
         .addField("Inventaire:","Dague, vêtements de tissu, outil de crochetage fait main, besace, très peu d'argent")
-        .addField("Santé:", "Bonne santé");
+        .addField("Santé:", "Blessé");
         message.channel.send({embed});   
     };
 
