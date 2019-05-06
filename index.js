@@ -122,7 +122,8 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message => {
-    var prefix = '!'
+    var prefix = '!';
+    var voiceChannel = message.member.voiceChannel;
     if (message.content.startsWith(`${prefix}jdes`)) {
         message.channel.send("Quel type de dès veux tu jeter ? (2,3,4,5,6,8,10,12,16,20,24,30,100)")
         .then(() => {
@@ -280,8 +281,7 @@ bot.on('message', message => {
         .addField("Santé:", "Bonne santé");
         message.channel.send({embed});   
     };  
-    bot.on('message', msg => {
-        var voiceChannel = msg.member.voiceChannel;
+
         if (message.content.startsWith(`${prefix}taverne` && isReady === true)) {
             i = Math.floor((Math.random() * 10) + 1);
             console.log(i); 
@@ -380,11 +380,10 @@ bot.on('message', message => {
             });
         }
 
-        if (msg.content === "$leave" && (isReady === false)) {
+        if (message.content === "$leave" && (isReady === false)) {
             voiceChannel.leave();
             isReady = true;
         }
-    });
         
 })
 
