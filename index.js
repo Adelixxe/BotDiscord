@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 const ytdl = require("ytdl-core");
 const bot = new Discord.Client();
 
-var isReady = true;
-
 const botOptions = { seek: 0, volume: 0.2 };
 
 var cli = new Discord.Client({autoReconnect:true});
@@ -282,107 +280,92 @@ bot.on('message', message => {
         message.channel.send({embed});   
     };  
 
-        if (message.content.startsWith(`${prefix}taverne` && isReady === true)) {
+        if (message.content.startsWith(`${prefix}taverne`)) {
             i = Math.floor((Math.random() * 10) + 1);
             console.log(i); 
-            isReady = false;
             voiceChannel.join()
             .then(connection => {
                 const dispatcher = connection.playStream(ytdl(`${taverne[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
-                    isReady = true;
                     voiceChannel.leave();
                 });
             });
         }
 
-        if (message.content.startsWith(`${prefix}combat` && isReady === true)) {
+        if (message.content.startsWith(`${prefix}combat`)) {
             i = Math.floor((Math.random() * 10) + 1);
             console.log(i); 
-            isReady = false;
             voiceChannel.join()
             .then(connection => {
                 const dispatcher = connection.playStream(ytdl(`${combat[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
-                    isReady = true;
                     voiceChannel.leave();
                 });
             });
         }
 
-        if (message.content.startsWith(`${prefix}aventure` && isReady === true)) {
+        if (message.content.startsWith(`${prefix}aventure`)) {
             i = Math.floor((Math.random() * 10) + 1);
             console.log(i); 
-            isReady = false;
             voiceChannel.join()
             .then(connection => {
                 const dispatcher = connection.playStream(ytdl(`${aventure[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
-                    isReady = true;
                     voiceChannel.leave();
                 });
             });
         }
 
-        if (message.content.startsWith(`${prefix}camp` && isReady === true)) {
+        if (message.content.startsWith(`${prefix}camp`)) {
             i = Math.floor((Math.random() * 10) + 1);
             console.log(i); 
-            isReady = false;
             voiceChannel.join()
             .then(connection => {
                 const dispatcher = connection.playStream(ytdl(`${camp[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
-                    isReady = true;
                     voiceChannel.leave();
                 });
             });
         }
 
-        if (message.content.startsWith(`${prefix}nuit` && isReady === true)) {
+        if (message.content.startsWith(`${prefix}nuit`)) {
             i = Math.floor((Math.random() * 10) + 1);
             console.log(i); 
-            isReady = false;
             voiceChannel.join()
             .then(connection => {
                 const dispatcher = connection.playStream(ytdl(`${nuit[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
-                    isReady = true;
                     voiceChannel.leave();
                 });
             });
         }
 
-        if (message.content.startsWith(`${prefix}ville` && isReady === true)) {
+        if (message.content.startsWith(`${prefix}ville`)) {
             i = Math.floor((Math.random() * 10) + 1);
             console.log(i); 
-            isReady = false;
             voiceChannel.join()
             .then(connection => {
                 const dispatcher = connection.playStream(ytdl(`${ville[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
-                    isReady = true;
                     voiceChannel.leave();
                 });
             });
         }
 
-        if (message.content.startsWith(`${prefix}triste` && isReady === true)) {
+        if (message.content.startsWith(`${prefix}triste`)) {
             i = Math.floor((Math.random() * mus10icmax) + 1);
             console.log(i); 
-            isReady = false;
             voiceChannel.join()
             .then(connection => {
                 const dispatcher = connection.playStream(ytdl(`${triste[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
-                    isReady = true;
                     voiceChannel.leave();
                 });
             });
         }
 
-        if (message.content === "$leave" && (isReady === false)) {
+        if (message.content === "$leave") {
             voiceChannel.leave();
-            isReady = true;
         }
         
 })
