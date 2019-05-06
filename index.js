@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 
 var isReady = true;
 
-const clientOptions = { seek: 0, volume: 0.2 };
+const botOptions = { seek: 0, volume: 0.2 };
 
 var cli = new Discord.Client({autoReconnect:true});
 var maximum = 0;
@@ -280,14 +280,14 @@ bot.on('message', message => {
         .addField("Santé:", "Bonne santé");
         message.channel.send({embed});   
     };  
-    client.on('message', msg => {
+    bot.on('message', msg => {
         var voiceChannel = msg.member.voiceChannel;
         if (message.content.startsWith(`${prefix}taverne` && isReady === true)) {
             i = Math.floor((Math.random() * musicmax) + 1);
             isReady = false;
             voiceChannel.join()
             .then(connection => {
-                const dispatcher = connection.playStream(ytdl(`${taverne[i]}`, { filter: 'audioonly' }), clientOptions);
+                const dispatcher = connection.playStream(ytdl(`${taverne[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
                     isReady = true;
                     voiceChannel.leave();
@@ -300,7 +300,7 @@ bot.on('message', message => {
             isReady = false;
             voiceChannel.join()
             .then(connection => {
-                const dispatcher = connection.playStream(ytdl(`${combat[i]}`, { filter: 'audioonly' }), clientOptions);
+                const dispatcher = connection.playStream(ytdl(`${combat[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
                     isReady = true;
                     voiceChannel.leave();
@@ -313,7 +313,7 @@ bot.on('message', message => {
             isReady = false;
             voiceChannel.join()
             .then(connection => {
-                const dispatcher = connection.playStream(ytdl(`${aventure[i]}`, { filter: 'audioonly' }), clientOptions);
+                const dispatcher = connection.playStream(ytdl(`${aventure[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
                     isReady = true;
                     voiceChannel.leave();
@@ -326,7 +326,7 @@ bot.on('message', message => {
             isReady = false;
             voiceChannel.join()
             .then(connection => {
-                const dispatcher = connection.playStream(ytdl(`${camp[i]}`, { filter: 'audioonly' }), clientOptions);
+                const dispatcher = connection.playStream(ytdl(`${camp[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
                     isReady = true;
                     voiceChannel.leave();
@@ -339,7 +339,7 @@ bot.on('message', message => {
             isReady = false;
             voiceChannel.join()
             .then(connection => {
-                const dispatcher = connection.playStream(ytdl(`${nuit[i]}`, { filter: 'audioonly' }), clientOptions);
+                const dispatcher = connection.playStream(ytdl(`${nuit[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
                     isReady = true;
                     voiceChannel.leave();
@@ -352,7 +352,7 @@ bot.on('message', message => {
             isReady = false;
             voiceChannel.join()
             .then(connection => {
-                const dispatcher = connection.playStream(ytdl(`${ville[i]}`, { filter: 'audioonly' }), clientOptions);
+                const dispatcher = connection.playStream(ytdl(`${ville[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
                     isReady = true;
                     voiceChannel.leave();
@@ -365,7 +365,7 @@ bot.on('message', message => {
             isReady = false;
             voiceChannel.join()
             .then(connection => {
-                const dispatcher = connection.playStream(ytdl(`${triste[i]}`, { filter: 'audioonly' }), clientOptions);
+                const dispatcher = connection.playStream(ytdl(`${triste[i]}`, { filter: 'audioonly' }), botOptions);
                 dispatcher.on('end', () => {
                     isReady = true;
                     voiceChannel.leave();
