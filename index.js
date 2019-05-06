@@ -7,8 +7,8 @@ var isReady = true;
 const botOptions = { seek: 0, volume: 0.2 };
 
 var cli = new Discord.Client({autoReconnect:true});
+
 var maximum = 0;
-var musicmax = 10;
 
 var taverne = [
     /*01*/     "https://www.youtube.com/watch?v=5QuZVNwQR4A",
@@ -283,7 +283,8 @@ bot.on('message', message => {
     bot.on('message', msg => {
         var voiceChannel = msg.member.voiceChannel;
         if (message.content.startsWith(`${prefix}taverne` && isReady === true)) {
-            i = Math.floor((Math.random() * musicmax) + 1);
+            i = Math.floor((Math.random() * 10) + 1);
+            console.log(i); 
             isReady = false;
             voiceChannel.join()
             .then(connection => {
@@ -296,7 +297,8 @@ bot.on('message', message => {
         }
 
         if (message.content.startsWith(`${prefix}combat` && isReady === true)) {
-            i = Math.floor((Math.random() * musicmax) + 1);
+            i = Math.floor((Math.random() * 10) + 1);
+            console.log(i); 
             isReady = false;
             voiceChannel.join()
             .then(connection => {
@@ -309,7 +311,8 @@ bot.on('message', message => {
         }
 
         if (message.content.startsWith(`${prefix}aventure` && isReady === true)) {
-            i = Math.floor((Math.random() * musicmax) + 1);
+            i = Math.floor((Math.random() * 10) + 1);
+            console.log(i); 
             isReady = false;
             voiceChannel.join()
             .then(connection => {
@@ -322,7 +325,8 @@ bot.on('message', message => {
         }
 
         if (message.content.startsWith(`${prefix}camp` && isReady === true)) {
-            i = Math.floor((Math.random() * musicmax) + 1);
+            i = Math.floor((Math.random() * 10) + 1);
+            console.log(i); 
             isReady = false;
             voiceChannel.join()
             .then(connection => {
@@ -335,7 +339,8 @@ bot.on('message', message => {
         }
 
         if (message.content.startsWith(`${prefix}nuit` && isReady === true)) {
-            i = Math.floor((Math.random() * musicmax) + 1);
+            i = Math.floor((Math.random() * 10) + 1);
+            console.log(i); 
             isReady = false;
             voiceChannel.join()
             .then(connection => {
@@ -348,7 +353,8 @@ bot.on('message', message => {
         }
 
         if (message.content.startsWith(`${prefix}ville` && isReady === true)) {
-            i = Math.floor((Math.random() * musicmax) + 1);
+            i = Math.floor((Math.random() * 10) + 1);
+            console.log(i); 
             isReady = false;
             voiceChannel.join()
             .then(connection => {
@@ -361,7 +367,8 @@ bot.on('message', message => {
         }
 
         if (message.content.startsWith(`${prefix}triste` && isReady === true)) {
-            i = Math.floor((Math.random() * musicmax) + 1);
+            i = Math.floor((Math.random() * mus10icmax) + 1);
+            console.log(i); 
             isReady = false;
             voiceChannel.join()
             .then(connection => {
@@ -374,7 +381,6 @@ bot.on('message', message => {
         }
 
         if (msg.content === "$leave" && (isReady === false)) {
-            if (!voiceChannel) return msg.reply('Not in a voice channel.');
             voiceChannel.leave();
             isReady = true;
         }
