@@ -353,7 +353,7 @@ bot.on('message', message => {
         }
 
         if (message.content.startsWith(`${prefix}triste`)) {
-            i = Math.floor((Math.random() * 10) + 1);
+            i = Math.floor((Math.random() * mus10icmax) + 1);
             console.log(i); 
             voiceChannel.join()
             .then(connection => {
