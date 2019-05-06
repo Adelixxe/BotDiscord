@@ -24,7 +24,7 @@ var taverne = [
     /*09*/     "https://youtu.be/2s5BjJkPfos",
     /*10*/     "https://youtu.be/WXxy3Y8daks"
 
-]
+];
 
 var combat = [
     /*01*/     "https://www.youtube.com/watch?v=NsiXbUOPvog",
@@ -37,7 +37,7 @@ var combat = [
     /*08*/     "https://youtu.be/qXVmZuPOzU0",
     /*09*/     "https://www.youtube.com/watch?v=0aL-vX7xYrE",
     /*10*/     "https://youtu.be/9d7IDfeZOSI",
-]
+];
 
 var aventure = [
     /*01*/     "https://www.youtube.com/watch?v=28RlnQOKjLE",
@@ -52,7 +52,7 @@ var aventure = [
     /*10*/     "https://www.youtube.com/watch?v=9SbT71beG0Q",
 
 
-]
+];
 
 var camp = [
     /*01*/     "https://youtu.be/lvB_nsKXew0",
@@ -66,7 +66,7 @@ var camp = [
     /*09*/     "https://youtu.be/BV9Z7LWspSk",
     /*10*/     "https://youtu.be/6GBZgzi1nYY",     
 
-]
+];
 
 var nuit = [
     /*01*/     "https://youtu.be/mmZGrvAvPZM",  
@@ -78,7 +78,7 @@ var nuit = [
     /*07*/     "https://www.youtube.com/watch?v=EjTX4TzRaYg",
     /*09*/     "https://www.youtube.com/watch?v=PrSnBKAGI1A",
     /*10*/     "https://youtu.be/WyinQVDvWKE"
-]
+];
 
 var ville = [
     /*01*/     "https://youtu.be/s5sTI_zBg40",
@@ -93,7 +93,7 @@ var ville = [
     /*10*/     "https://youtu.be/jDZgFn_7Nvs"
 
 
-]
+];
 
 var triste = [
     /*01*/     "https://youtu.be/BEm0AjTbsac",
@@ -106,7 +106,7 @@ var triste = [
     /*08*/     "https://youtu.be/5A8Iarf8lSY",
     /*09*/     "https://youtu.be/TRXVO1NuGVU",
     /*10*/     "https://youtu.be/xNhctnU8YVw",
-]
+];
 
 
 bot.commands = new Discord.Collection();
