@@ -123,7 +123,7 @@ bot.on('message', message => {
     var prefix = '!';
     var voiceChannel = message.member.voiceChannel;
     if (message.content.startsWith(`${prefix}jdes`)) {
-        message.channel.send("Quel type de dès veux tu jeter ? (2,3,4,5,6,8,10,12,16,20,24,30,100)")
+        message.channel.send("Quel type de dès veux tu jeter ? (2,3,4,5,6,7,8,9,10,12,16,20,24,30,50,100)")
         .then(() => {
             message.channel.awaitMessages(() => true, {
                 max: 1,
@@ -132,8 +132,8 @@ bot.on('message', message => {
             })
             .then((collected) => {
                 maximum = collected.first().content
-                if (maximum === "2" || maximum === "5" || maximum === "3" || maximum === "4" || maximum ==="6" || maximum ==="8" || maximum ==="10" || 
-                maximum ==="12" || maximum ==="16" || maximum ==="2O" || maximum ==="24" || maximum ==="30" ||
+                if (maximum === "2" || maximum === "5" || maximum === "3" || maximum === "4" || maximum ==="6" || maximum ==="7" || maximum ==="8" || maximum ==="9"|| maximum ==="10" || 
+                maximum ==="12" || maximum ==="16" || maximum ==="2O" || maximum ==="24" || maximum ==="30" ||maximum ==="50" ||
                 maximum ==="100") {
                     i = Math.floor((Math.random() * maximum) + 1);
                     console.log(i); 
